@@ -9,7 +9,7 @@ function AddForm({ fetchEntries }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8080/add', { name, url, category });
+            await axios.post('http://localhost:8096/add', { name, url, category });
             setName('');
             setUrl('');
             setCategory('');

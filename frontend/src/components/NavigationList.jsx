@@ -7,7 +7,7 @@ function NavigationList({ entries, fetchEntries, filter }) {
 
     const deleteEntry = async (id) => {
         try {
-            await axios.post(`http://localhost:8080/delete/${id}`);
+            await axios.post(`http://localhost:8096/delete/${id}`);
             fetchEntries();
         } catch (error) {
             console.error('There was an error deleting the entry!', error);

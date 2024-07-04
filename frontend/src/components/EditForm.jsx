@@ -9,7 +9,7 @@ function EditForm({ entry, fetchEntries, toggleEdit }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`http://localhost:8080/edit/${entry.id}`, { name, url, category });
+            await axios.post(`http://localhost:8096/edit/${entry.id}`, { name, url, category });
             fetchEntries();
             toggleEdit();
         } catch (error) {

@@ -11,7 +11,7 @@ function App() {
 
     const fetchEntries = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/entries');
+            const response = await axios.get('http://localhost:8096/entries');
             setEntries(response.data);
         } catch (error) {
             console.error('There was an error fetching the entries!', error);
